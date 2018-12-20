@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.pradeeprai195.torovideodemo.R;
+
 import im.ene.toro.widget.PressablePlayerSelector;
 
 class BasicListAdapter extends RecyclerView.Adapter<BasicPlayerViewHolder> {
@@ -24,8 +26,7 @@ class BasicListAdapter extends RecyclerView.Adapter<BasicPlayerViewHolder> {
     @NonNull
     @Override
     public BasicPlayerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(BasicPlayerViewHolder.LAYOUT_RES, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.view_holder_exoplayer_basic, parent, false);
         BasicPlayerViewHolder viewHolder = new BasicPlayerViewHolder(view, this.selector);
         if (this.selector != null) viewHolder.itemView.setOnLongClickListener(this.selector);
         return viewHolder;

@@ -5,6 +5,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import com.google.android.exoplayer2.ui.PlayerControlView;
 import com.google.android.exoplayer2.ui.PlayerView;
 import com.pradeeprai195.torovideodemo.R;
 
@@ -21,9 +22,6 @@ import im.ene.toro.widget.PressablePlayerSelector;
 class BasicPlayerViewHolder extends RecyclerView.ViewHolder implements ToroPlayer {
 
     private static final String TAG = "Toro:Basic:Holder";
-
-    static final int LAYOUT_RES = R.layout.view_holder_exoplayer_basic;
-
     ToroPlayerHelper helper;
     Uri mediaUri;
     PlayerView playerView;
